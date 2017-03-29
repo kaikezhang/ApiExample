@@ -7,8 +7,8 @@ A simple laravel API example to show CRUD operations
 * `git clone https://github.com/kaikezhang/ApiExample.git ApiExample`
 * `cd ApiExample`
 * `composer install`
-* `php artisan key:generate`
 * `cp .env.example .env`
+* `php artisan key:generate`
 * Create a database and inform *.env*
 * `php artisan migrate` to create tables
 * `php artisan serve` to start the app on http://localhost:8000/ or config a web server to start the app
