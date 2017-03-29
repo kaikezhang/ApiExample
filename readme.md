@@ -1,31 +1,41 @@
-laravel new ApiExample
+## API example ##
 
-create database
+A simple laravel API example to show CRUD operations
 
-modify .env file
+### Installation ###
 
-php artisan make:model Task --migration
+* `git clone https://github.com/kaikezhang/ApiExample.git ApiExample`
+* `cd ApiExample`
+* `composer install`
+* `php artisan key:generate`
+* `cp .env.example .env`
+* Create a database and inform *.env*
+* `php artisan migrate` to create tables
+* `php artisan serve` to start the app on http://localhost:8000/ or config a web server to start the app
 
-Edit migration file
 
-php artisan migrate
+### Step to replicate ###
+* `laravel new ApiExample`
+* create database and inform *.env*
+* `php artisan make:model Task --migration`
+* Edit migration file
+* `php artisan migrate`
+* `Edit routes/api.php`
+* Details can be found at [this commit](https://github.com/kaikezhang/ApiExample/commit/23957e73fb4ea36d96f2e75423702669db8a8b75)
 
-Edite routes/api.php
+### Test with Postman ###
+* Create a task
 
-Test with postman:
+  Post `$domain/api/tasks` insert a `name` field in body.
 
-Create a task
+* Show all tasks
 
-Post $domain/api/tasks insert name field in body.
+  Get `$domain/api/tasks`
 
-Show all tasks
+* Delete a task
 
-Get $domain/api/tasks
+  Delete `$domain/api/tasks/{id}`
 
-Delete a task
+* Update a task
 
-Delete $domain/api/tasks/{id}
-
-Update a task
-
-Put $domain/api/tasks/{id} insert name field in body and select x-www-form-urlencoded.
+  Put `$domain/api/tasks/{id}` insert `name` field in body and select `x-www-form-urlencoded`.
