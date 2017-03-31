@@ -39,3 +39,7 @@ A simple laravel API example to show CRUD operations
 * Update a task
 
   Put `$domain/api/tasks/{id}` insert `name` field in body and select `x-www-form-urlencoded`.
+
+### Add CORS ###
+
+https://github.com/barryvdh/laravel-cors
